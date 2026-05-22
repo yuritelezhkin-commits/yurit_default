@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="light">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -244,15 +244,15 @@
                  onerror="this.parentElement.style.display='none'">
           </div>
           <div>
-            <h1 class="name">Юрий Тележкин</h1>
-            <span class="title-tag" data-ru="Digital · Операции · Партнёрства" data-en="Digital · Operations · Partnerships">Digital · Операции · Партнёрства</span>
+            <h1 class="name">Yuri Telezhkin</h1>
+            <span class="title-tag" data-ru="Digital · Операции · Партнёрства" data-en="Digital · Operations · Partnerships">Digital · Operations · Partnerships</span>
           </div>
         </div>
         <div class="contacts">
           <a href="mailto:yuri.telezhkin@gmail.com">yuri.telezhkin@gmail.com</a>
-          <a href="tel:+79167953747">+7 916 795 37 47</a>
+          <a href="https://t.me/yuri_tl" target="_blank" rel="noopener">Telegram: @yuri_tl</a>
           <a href="http://linkedin.com/in/yuri-telezhkin-80a26436" target="_blank" rel="noopener">LinkedIn →</a>
-          <span data-ru="Москва" data-en="Moscow, Russia">Москва</span>
+          <span data-ru="Москва" data-en="Moscow, Russia">Moscow, Russia</span>
         </div>
       </div>
     </header>
@@ -267,7 +267,7 @@
 
     <!-- EXPERIENCE -->
     <section class="section">
-      <p class="section-title" data-ru="Опыт работы" data-en="Work Experience">Опыт работы</p>
+      <p class="section-title" data-ru="Опыт работы" data-en="Work Experience">Work Experience</p>
 
       <!-- Toptraffic -->
       <div class="job">
@@ -420,7 +420,7 @@
 
     <!-- PREVIOUS -->
     <section class="section">
-      <p class="section-title" data-ru="Предыдущий опыт" data-en="Earlier Experience">Предыдущий опыт</p>
+      <p class="section-title" data-ru="Предыдущий опыт" data-en="Earlier Experience">Earlier Experience</p>
       <div class="prev-exp">
         <div class="prev-item"><strong>Httpool</strong> — <span data-ru="Key Client Success, 2015–2021" data-en="Key Client Success, 2015–2021">Key Client Success, 2015–2021</span></div>
         <div class="prev-item"><strong>Httpool</strong> — <span data-ru="Client Success, 2012–2015" data-en="Client Success, 2012–2015">Client Success, 2012–2015</span></div>
@@ -431,7 +431,7 @@
 
     <!-- SKILLS -->
     <section class="section">
-      <p class="section-title" data-ru="Навыки" data-en="Skills">Навыки</p>
+      <p class="section-title" data-ru="Навыки" data-en="Skills">Skills</p>
       <div class="skills-grid">
         <div class="skill-card">
           <div class="skill-category" data-ru="Adtech-экосистема" data-en="Adtech Ecosystem">Adtech-экосистема</div>
@@ -461,14 +461,14 @@
     <!-- EDU + LANG -->
     <div class="meta-row">
       <div class="meta-block">
-        <div class="meta-label" data-ru="Образование" data-en="Education">Образование</div>
+        <div class="meta-label" data-ru="Образование" data-en="Education">Education</div>
         <div class="meta-value">
           <strong data-ru="МИЭМО" data-en="Moscow Institute of Economics and International Relations">МИЭМО</strong><br>
           <span data-ru="Менеджмент организации, 2004–2009" data-en="Organizational Management, 2004–2009">Менеджмент организации, 2004–2009</span>
         </div>
       </div>
       <div class="meta-block">
-        <div class="meta-label" data-ru="Языки" data-en="Languages">Языки</div>
+        <div class="meta-label" data-ru="Языки" data-en="Languages">Languages</div>
         <div class="meta-value">
           <strong data-ru="Русский" data-en="Russian">Русский</strong> — <span data-ru="родной" data-en="native">родной</span><br>
           <strong data-ru="Английский" data-en="English">Английский</strong> — C1
@@ -477,7 +477,7 @@
     </div>
 
     <footer class="footer">
-      <span data-ru="Москва · " data-en="Moscow · ">Москва · </span><a href="mailto:yuri.telezhkin@gmail.com">yuri.telezhkin@gmail.com</a> · <a href="tel:+79167953747">+7 916 795 37 47</a>
+      <span data-ru="Москва · " data-en="Moscow · ">Moscow · </span><a href="mailto:yuri.telezhkin@gmail.com">yuri.telezhkin@gmail.com</a> · <a href="https://t.me/yuri_tl" target="_blank" rel="noopener">Telegram: @yuri_tl</a>
     </footer>
 
   </div>
@@ -505,7 +505,8 @@
     }
 
     // ---- LANG ----
-    var currentLang = 'ru';
+    var currentLang = 'en';
+    document.addEventListener('DOMContentLoaded', function(){ applyLang(); });
 
     function toggleLang() {
       currentLang = currentLang === 'ru' ? 'en' : 'ru';
@@ -524,10 +525,10 @@
 
       // Name
       var nameEl = document.querySelector('.name');
-      if (nameEl) nameEl.textContent = isEn ? 'Yuri Telezhkin' : 'Юрий Тележкин';
+      if (nameEl) nameEl.textContent = isEn ? 'Yuri Telezhkin' : 'Тележкин Юрий';
       // Update photo alt
       var photoImg = document.querySelector('.photo-wrap img');
-      if (photoImg) photoImg.alt = isEn ? 'Yuri Telezhkin' : 'Юрий Тележкин';
+      if (photoImg) photoImg.alt = isEn ? 'Yuri Telezhkin' : 'Тележкин Юрий';
 
       // All elements with data-ru / data-en on their innerHTML
       var els = document.querySelectorAll('[data-ru][data-en]');

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yuri Telezhkin — Digital Operations & Partnerships</title>
+  <meta name="description" content="15+ years in Digital Advertising: operations, client success, partnerships.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root, [data-theme="light"] {
+      --color-bg:             #f7f6f2;
+      --color-surface:        #f9f8f5;
+      --color-surface-2:      #ffffff;
+      --color-surface-offset: #edeae5;
+      --color-border:         rgba(40,37,29,0.1);
+      --color-divider:        rgba(40,37,29,0.07);
+      --color-text:           #28251d;
+      --color-text-muted:     #6b6860;
+      --color-text-faint:     #a8a7a2;
+      --color-primary:        #01696f;
+      --color-primary-light:  #e8f2f2;
+      --shadow-sm: 0 1px 3px rgba(40,37,29,0.06), 0 4px 16px rgba(40,37,29,0.04);
+      --shadow-md: 0 2px 8px rgba(40,37,29,0.08), 0 16px 40px rgba(40,37,29,0.06);
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --radius-sm: 4px; --radius-md: 8px; --radius-lg: 12px;
+      --radius-xl: 16px; --radius-full: 9999px;
+    }
+    [data-theme="dark"] {
+      --color-bg:             #141310;
+      --color-surface:        #1a1916;
+      --color-surface-2:      #1f1e1b;
+      --color-surface-offset: #232220;
+      --color-border:         rgba(210,207,200,0.1);
+      --color-divider:        rgba(210,207,200,0.06);
+      --color-text:           #d4d2ce;
+      --color-text-muted:     #8a8880;
+      --color-text-faint:     #56544f;
+      --color-primary:        #4f9fa6;
+      --color-primary-light:  #1d2e2f;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.2), 0 4px 16px rgba(0,0,0,0.15);
+      --shadow-md: 0 2px 8px rgba(0,0,0,0.25), 0 16px 40px rgba(0,0,0,0.2);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme]) {
+        --color-bg:#141310;--color-surface:#1a1916;--color-surface-2:#1f1e1b;
+        --color-surface-offset:#232220;--color-border:rgba(210,207,200,0.1);
+        --color-divider:rgba(210,207,200,0.06);--color-text:#d4d2ce;
+        --color-text-muted:#8a8880;--color-text-faint:#56544f;
+        --color-primary:#4f9fa6;--color-primary-light:#1d2e2f;
+        --shadow-sm:0 1px 3px rgba(0,0,0,0.2),0 4px 16px rgba(0,0,0,0.15);
+        --shadow-md:0 2px 8px rgba(0,0,0,0.25),0 16px 40px rgba(0,0,0,0.2);
+      }
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth;}
+    body{font-family:var(--font-body);font-size:15px;line-height:1.6;color:var(--color-text);background:var(--color-bg);min-height:100dvh;transition:background .25s,color .25s;}
+    a{color:var(--color-primary);text-decoration:none;}
+    a:hover{text-decoration:underline;}
+
+    /* TOOLBAR */
+    .toolbar {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      display: flex;
+      gap: 8px;
+      z-index: 100;
+    }
+    .toolbar-btn {
+      height: 36px;
+      padding: 0 14px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--color-border);
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: all 0.2s;
+      box-shadow: var(--shadow-sm);
+      white-space: nowrap;
+    }
+    .toolbar-btn:hover { color: var(--color-text); box-shadow: var(--shadow-md); }
+    .toolbar-btn.active { background: var(--color-primary); color: #fff; border-color: var(--color-primary); }
+    .toolbar-btn svg { flex-shrink: 0; }
+    .icon-btn {
+      width: 36px;
+      padding: 0;
+      justify-content: center;
+    }
+
+    /* LAYOUT */
+    .page-wrapper { max-width: 780px; margin: 0 auto; padding: 48px 24px 80px; }
+
+    /* HEADER */
+    .header { padding-bottom: 28px; border-bottom: 1px solid var(--color-border); margin-bottom: 36px; }
+    .header-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap; }
+    .name { font-family: var(--font-body); font-size: clamp(30px,5vw,46px); font-weight: 600; line-height: 1.1; letter-spacing: -0.03em; }
+    .title-tag { display: inline-block; margin-top: 8px; font-size: 12px; font-weight: 500; color: var(--color-primary); background: var(--color-primary-light); padding: 4px 10px; border-radius: var(--radius-full); letter-spacing: 0.02em; }
+    .contacts { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; font-size: 13px; color: var(--color-text-muted); flex-shrink: 0; }
+    .contacts a { color: var(--color-text-muted); }
+    .contacts a:hover { color: var(--color-primary); text-decoration: none; }
+
+    /* ABOUT */
+    .about { margin-bottom: 36px; }
+    .about p { font-size: 15px; line-height: 1.7; color: var(--color-text-muted); max-width: 65ch; }
+    .about p strong { color: var(--color-text); font-weight: 500; }
+
+    /* SECTION */
+    .section { margin-bottom: 36px; }
+    .section-title { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-faint); margin-bottom: 16px; }
+
+    /* JOB */
+    .job { padding: 22px; background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius-xl); margin-bottom: 10px; box-shadow: var(--shadow-sm); transition: box-shadow .2s, transform .2s; }
+    .job:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); }
+    .job-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 3px; flex-wrap: wrap; }
+    .job-company { font-size: 14px; font-weight: 600; color: var(--color-text); }
+    .job-company a { color: var(--color-text); }
+    .job-company a:hover { color: var(--color-primary); text-decoration: none; }
+    .job-industry { font-size: 12px; color: var(--color-text-faint); font-weight: 400; }
+    .job-meta { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+    .job-period { font-size: 12px; color: var(--color-text-faint); white-space: nowrap; }
+    .job-location { font-size: 12px; color: var(--color-text-faint); }
+    .job-role { font-size: 13px; font-weight: 500; color: var(--color-primary); margin-bottom: 12px; }
+    .job-bullets { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .job-bullets li { font-size: 13.5px; line-height: 1.55; color: var(--color-text-muted); padding-left: 14px; position: relative; }
+    .job-bullets li::before { content: ''; position: absolute; left: 0; top: 9px; width: 5px; height: 1px; background: var(--color-primary); opacity: 0.4; }
+    .job-bullets li strong { color: var(--color-text); font-weight: 500; }
+
+    /* PREV */
+    .prev-exp { padding: 18px 22px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); display: flex; flex-wrap: wrap; gap: 6px 20px; }
+    .prev-item { font-size: 13px; color: var(--color-text-muted); }
+    .prev-item strong { font-weight: 500; color: var(--color-text); }
+
+    /* SKILLS */
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+    .skill-card { padding: 14px 16px; background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
+    .skill-card.full { grid-column: 1 / -1; }
+    .skill-category { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 6px; }
+    .skill-list { font-size: 13px; color: var(--color-text-muted); line-height: 1.55; }
+
+    /* META */
+    .meta-row { display: flex; gap: 24px; flex-wrap: wrap; }
+    .meta-block { flex: 1; min-width: 180px; }
+    .meta-label { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-faint); margin-bottom: 5px; }
+    .meta-value { font-size: 13.5px; color: var(--color-text-muted); line-height: 1.5; }
+    .meta-value strong { color: var(--color-text); font-weight: 500; }
+
+    .divider { height: 1px; background: var(--color-divider); margin: 32px 0; }
+    .footer { text-align: center; font-size: 12px; color: var(--color-text-faint); margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--color-divider); }
+
+
+    /* PHOTO */
+    .header-left {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .photo-wrap {
+      flex-shrink: 0;
+      width: 80px;
+      height: 80px;
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      border: 2px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+    }
+    .photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    @media (max-width: 400px) {
+      .photo-wrap { width: 64px; height: 64px; }
+      .header-left { gap: 14px; }
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .page-wrapper { padding: 24px 16px 60px; }
+      .header-top { flex-direction: column; gap: 14px; }
+      .contacts { align-items: flex-start; }
+      .job { padding: 16px; }
+      .toolbar { top: 12px; right: 12px; gap: 6px; }
+      .toolbar-btn { height: 32px; padding: 0 10px; font-size: 11px; }
+      .icon-btn { width: 32px; }
+    }
+
+    /* PRINT */
+    @media print {
+      .toolbar { display: none !important; }
+      body { background: white; color: #000; font-size: 11pt; }
+      .page-wrapper { max-width: 100%; padding: 0; }
+      .job { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; margin-bottom: 8px; padding: 12px; }
+      .job:hover { transform: none; }
+      .header { border-bottom: 2px solid #000; }
+      a { color: inherit; text-decoration: none; }
+      .prev-exp { background: #f5f5f5; }
+      .skill-card { background: #f5f5f5; }
+      .name { font-size: 28pt; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <!-- Lang toggle -->
+    <button class="toolbar-btn" id="lang-btn" onclick="toggleLang()" aria-label="Switch language">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <span id="lang-label">EN</span>
+    </button>
+    <!-- PDF -->
+    <button class="toolbar-btn" onclick="downloadPDF()" aria-label="Download PDF">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <span data-ru="PDF" data-en="PDF">PDF</span>
+    </button>
+    <!-- Theme -->
+    <button class="toolbar-btn icon-btn" id="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header-top">
+        <div class="header-left">
+          <div class="photo-wrap">
+            <img src="https://drive.google.com/thumbnail?id=1q7WQtBqYhVZJJ9zt2Ed-bYZ3K1TD4MrA&sz=w400"
+                 alt="Юрий Тележкин"
+                 width="80" height="80"
+                 loading="eager"
+                 onerror="this.parentElement.style.display='none'">
+          </div>
+          <div>
+            <h1 class="name">Yuri Telezhkin</h1>
+            <span class="title-tag" data-ru="Digital · Операции · Партнёрства" data-en="Digital · Operations · Partnerships">Digital · Operations · Partnerships</span>
+          </div>
+        </div>
+        <div class="contacts">
+          <a href="mailto:yuri.telezhkin@gmail.com">yuri.telezhkin@gmail.com</a>
+          <a href="https://t.me/yuri_tl" target="_blank" rel="noopener">Telegram: @yuri_tl</a>
+          <a href="http://linkedin.com/in/yuri-telezhkin-80a26436" target="_blank" rel="noopener">LinkedIn →</a>
+          <span data-ru="Москва" data-en="Moscow, Russia">Moscow, Russia</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="about">
+      <p data-ru="Более 15 лет в Digital Advertising. Работаю <strong>на стыке операционной деятельности, продукта и клиентского сервиса</strong>: выстраиваю кросс-командную синергию, устраняю узкие места с наибольшим влиянием на результат, создаю позитивный клиентский опыт с фокусом на сервис и продукт."
+         data-en="15+ years in Digital Advertising. I work <strong>at the intersection of operations, product, and client success</strong> — building cross-functional collaboration, eliminating bottlenecks to drive measurable business impact, and delivering best-in-class client service.">
+        Более 15 лет в Digital Advertising. Работаю <strong>на стыке операционной деятельности, продукта и клиентского сервиса</strong>: выстраиваю кросс-командную синергию, устраняю узкие места с наибольшим влиянием на результат, создаю позитивный клиентский опыт с фокусом на сервис и продукт.
+      </p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section">
+      <p class="section-title" data-ru="Опыт работы" data-en="Work Experience">Work Experience</p>
+
+      <!-- Toptraffic -->
+      <div class="job">
+        <div class="job-header">
+          <div class="job-company">
+            <a href="https://www.toptraffic.ru/ru/" target="_blank" rel="noopener">Toptraffic</a>
+            <span class="job-industry" data-ru="Digital Advertising Agency" data-en="Digital Advertising Agency">Digital Advertising Agency</span>
+          </div>
+          <div class="job-meta">
+            <span class="job-period" data-ru="Февр '25 — Март '26" data-en="Feb '25 — Mar '26">Февр '25 — Март '26</span>
+            <span class="job-location" data-ru="· Россия" data-en="· Russia">· Россия</span>
+          </div>
+        </div>
+        <div class="job-role" data-ru="Chief Operating Officer" data-en="Chief Operating Officer">Chief Operating Officer</div>
+        <ul class="job-bullets">
+          <li data-ru="<strong>Управлял операциями 3 юнитов (~30 чел.):</strong> стандартизация процессов, вывод ключевых узлов в CRM, контроль загруженности и эффективности команд."
+              data-en="<strong>Oversaw operations across 3 units (~30 people):</strong> standardized workflows, implemented CRM tracking, and introduced team load and efficiency controls.">
+            <strong>Управлял операциями 3 юнитов (~30 чел.):</strong> стандартизация процессов, вывод ключевых узлов в CRM, контроль загруженности и эффективности команд.
+          </li>
+          <li data-ru="<strong>Снизил и стабилизировал churn клиентов</strong> за счёт перехода на проектный формат работы и скоринга «здоровья» портфеля."
+              data-en="<strong>Reduced and stabilized client churn</strong> by introducing a project-based client framework and portfolio health scoring.">
+            <strong>Снизил и стабилизировал churn клиентов</strong> за счёт перехода на проектный формат работы и скоринга «здоровья» портфеля.
+          </li>
+          <li data-ru="<strong>Улучшил экономику юнита mobile performance</strong>, внедрив систему управления рибейтами: учёт коммитов и стратегия закупки у ключевых партнёров."
+              data-en="<strong>Improved unit economics in the mobile performance unit</strong> by implementing a rebate management system: commitment tracking and buying strategy across key partners.">
+            <strong>Улучшил экономику юнита mobile performance</strong>, внедрив систему управления рибейтами: учёт коммитов и стратегия закупки у ключевых партнёров.
+          </li>
+          <li data-ru="<strong>Руководил переходом influence-юнита на внутреннюю платформу</strong>: снизил число операционных ошибок и повысил пропускную способность команды без увеличения штата."
+              data-en="<strong>Led the migration of the influence unit to an internal platform</strong>: reduced operational errors and increased team throughput without adding headcount.">
+            <strong>Руководил переходом influence-юнита на внутреннюю платформу</strong>: снизил число операционных ошибок и повысил пропускную способность команды без увеличения штата.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Appnext -->
+      <div class="job">
+        <div class="job-header">
+          <div class="job-company">
+            <a href="https://appnext.com/" target="_blank" rel="noopener">Appnext</a>
+            <span class="job-industry" data-ru="Mobile App Discovery Platform" data-en="Mobile App Discovery Platform">Mobile App Discovery Platform</span>
+          </div>
+          <div class="job-meta">
+            <span class="job-period" data-ru="Февр '24 — Дек '24" data-en="Feb '24 — Dec '24">Февр '24 — Дек '24</span>
+            <span class="job-location" data-ru="· Россия" data-en="· Russia">· Россия</span>
+          </div>
+        </div>
+        <div class="job-role" data-ru="Key Client Success / Partnerships" data-en="Key Client Success / Partnerships">Key Client Success / Partnerships</div>
+        <ul class="job-bullets">
+          <li data-ru="Увеличил <strong>выручку от ключевых traffic-партнёров примерно на 15% квартал к кварталу</strong> за счёт incentive-программ для Tier-1 клиентов и контроля реализации командой — от переговоров до открутки и начисления условий."
+              data-en="Grew <strong>revenue from key traffic partners by about 15% quarter over quarter</strong> by developing incentive programs for Tier-1 clients and controlling team execution from negotiations to delivery and incentive accrual.">
+            Увеличил <strong>выручку от ключевых traffic-партнёров примерно на 15% квартал к кварталу</strong> за счёт incentive-программ для Tier-1 клиентов и контроля реализации командой — от переговоров до открутки и начисления условий.
+          </li>
+          <li data-ru="Увеличил <strong>выручку агентского канала</strong> за счёт гибкой системы рибейтов, дополнительных переговоров и контроля выполнения условий по этапам."
+              data-en="Increased <strong>agency channel revenue</strong> through a flexible rebate system, additional negotiations, and milestone-based execution control.">
+            Увеличил <strong>выручку агентского канала</strong> за счёт гибкой системы рибейтов, дополнительных переговоров и контроля выполнения условий по этапам.
+          </li>
+          <li data-ru="Улучшил <strong>качество клиентского сервиса</strong> единым командным подходом к QBR, аналитике и планам роста."
+              data-en="Improved <strong>quality of client service</strong> through a unified team approach to QBRs, analytics, and growth planning.">
+            Улучшил <strong>качество клиентского сервиса</strong> единым командным подходом к QBR, аналитике и планам роста.
+          </li>
+          <li data-ru="Внёс структурный подход к тестированию форматов и стратегий биддинга, создав <strong>повторяемые сценарии масштабирования бюджетов</strong> для ключевых клиентов."
+              data-en="Introduced a structured approach to testing ad formats and bidding strategies, creating <strong>repeatable budget scaling scenarios</strong> for key clients.">
+            Внёс структурный подход к тестированию форматов и стратегий биддинга, создав <strong>повторяемые сценарии масштабирования бюджетов</strong> для ключевых клиентов.
+          </li>
+          <li data-ru="<strong>Расширил портфель до 15+ ключевых клиентов</strong>, выявляя блокеры роста и формируя под них стратегии развития."
+              data-en="<strong>Expanded the portfolio to 15+ key clients</strong> by identifying growth blockers and building targeted growth strategies.">
+            <strong>Расширил портфель до 15+ ключевых клиентов</strong>, выявляя блокеры роста и формируя под них стратегии развития.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Aleph -->
+      <div class="job">
+        <div class="job-header">
+          <div class="job-company">
+            <a href="https://alephdigital.com/" target="_blank" rel="noopener">Httpool by Aleph</a>
+            <span class="job-industry" data-ru="Digital Advertising &amp; Tech" data-en="Digital Advertising &amp; Tech">Digital Advertising &amp; Tech</span>
+          </div>
+          <div class="job-meta">
+            <span class="job-period" data-ru="Март '22 — Окт '23" data-en="Mar '22 — Oct '23">Март '22 — Окт '23</span>
+            <span class="job-location" data-ru="· Кипр" data-en="· Cyprus">· Кипр</span>
+          </div>
+        </div>
+        <div class="job-role" data-ru="Client Success Lead" data-en="Client Success Lead">Client Success Lead</div>
+        <ul class="job-bullets">
+          <li data-ru="Управлял <strong>клиентскими портфелями с оборотами до $600K в месяц</strong>"
+              data-en="Managed <strong>client portfolios with monthly budgets up to $600K</strong>">
+            Управлял <strong>клиентскими портфелями с оборотами до $600K в месяц</strong>
+          </li>
+          <li data-ru="Создал <strong>подразделение аккаунтинга</strong> по выделенному портфелю продуктов: цели, мотивация, процесс от брифа до реализации и развития"
+              data-en="Built a <strong>client success team</strong> for a dedicated product portfolio: goal-setting, team motivation, end-to-end funnel from briefing to delivery and account growth">
+            Создал <strong>подразделение аккаунтинга</strong> по выделенному портфелю продуктов: цели, мотивация, процесс от брифа до реализации и развития
+          </li>
+          <li data-ru="Кратно <strong>увеличил обороты бюджетообразующего клиента</strong> через выявление точек роста, подключение новых направлений и единый подход к планированию с новыми командами внутри клиента"
+              data-en="Significantly <strong>scaled revenue of the top-spending client</strong> by identifying growth opportunities, expanding into new markets, and building structured reporting and communication with multiple client-side teams">
+            Кратно <strong>увеличил обороты бюджетообразующего клиента</strong> через выявление точек роста, подключение новых направлений и единый подход к планированию с новыми командами внутри клиента
+          </li>
+          <li data-ru="Развил клиентский портфель на новом рынке до <strong>20+ активных клиентов</strong> (адаптация Snapchat для mobile performance: гипотезы по гео, вертикалям, форматам, специальные предложения)"
+              data-en="Grew the client base in a new market to <strong>20+ active clients</strong> (adapted Snapchat pitch decks, capabilities, and strategies for mobile performance advertisers)">
+            Развил клиентский портфель на новом рынке до <strong>20+ активных клиентов</strong> (адаптация Snapchat для mobile performance: гипотезы по гео, вертикалям, форматам, специальные предложения)
+          </li>
+          <li data-ru="<strong>Повысил обороты смежных продуктовых команд</strong> кросс-продуктовым подходом при онбординге и трекингом активности по всему пулу продуктов"
+              data-en="<strong>Increased revenue across fellow product teams</strong> through cross-product onboarding and client activity tracking across the full stack of available products (battleship approach)">
+            <strong>Повысил обороты смежных продуктовых команд</strong> кросс-продуктовым подходом при онбординге и трекингом активности по всему пулу продуктов
+          </li>
+          <li data-ru="Совместно с сейлз и баинг-директором <strong>повысил конверсию от питча к размещению</strong> сменой продуктового нарратива (от уникальной аудитории — к конверсии и этапности тестирования)"
+              data-en="Together with the Sales and Buying Director, <strong>improved pitch-to-delivery conversion</strong> by shifting the product narrative — from reach and unique audience to performance KPIs and step-by-step testing">
+            Совместно с сейлз и баинг-директором <strong>повысил конверсию от питча к размещению</strong> сменой продуктового нарратива (от уникальной аудитории — к конверсии и этапности тестирования)
+          </li>
+        </ul>
+      </div>
+
+      <!-- Httpool -->
+      <div class="job">
+        <div class="job-header">
+          <div class="job-company">
+            Httpool
+            <span class="job-industry" data-ru="Cross-channel ad network" data-en="Cross-channel ad network">Cross-channel ad network</span>
+          </div>
+          <div class="job-meta">
+            <span class="job-period" data-ru="Февр '21 — Март '22" data-en="Feb '21 — Mar '22">Февр '21 — Март '22</span>
+            <span class="job-location" data-ru="· Россия" data-en="· Russia">· Россия</span>
+          </div>
+        </div>
+        <div class="job-role" data-ru="Client Success Lead" data-en="Client Success Lead">Client Success Lead</div>
+        <ul class="job-bullets">
+          <li data-ru="Вырастил портфель с нуля до <strong>30+ крупных клиентов</strong> с новым продуктом на рынке (Twitter)"
+              data-en="Built the portfolio from scratch to <strong>30+ major clients</strong> with a new-to-market product (Twitter)">
+            Вырастил портфель с нуля до <strong>30+ крупных клиентов</strong> с новым продуктом на рынке (Twitter)
+          </li>
+          <li data-ru="<strong>Повысил доходность от агентств</strong> разработкой, согласованием и контролем рибейтных условий (Publicis, Dentsu, Omnicom, Havas, BBDO)"
+              data-en="<strong>Increased agency revenue</strong> by designing, negotiating, and controlling rebate agreements (Publicis, Dentsu, Omnicom, Havas, BBDO)">
+            <strong>Повысил доходность от агентств</strong> разработкой, согласованием и контролем рибейтных условий (Publicis, Dentsu, Omnicom, Havas, BBDO)
+          </li>
+          <li data-ru="Увеличил обороты подразделения реализацией <strong>специальных предложений и спецпроектов</strong> (чатботы, брендлифты, лидген-форматы)"
+              data-en="Grew unit revenue through <strong>custom offers and special projects</strong> (chatbots, brand lifts, lead gen formats)">
+            Увеличил обороты подразделения реализацией <strong>специальных предложений и спецпроектов</strong> (чатботы, брендлифты, лидген-форматы)
+          </li>
+          <li data-ru="<strong>Адаптировал и защитил глобальные стратегии</strong> международных брендов на российском рынке: Samsung, Spotify, LG, HP, Volvo"
+              data-en="<strong>Adapted and pitched global strategies</strong> of international brands for the Russian market: Samsung, Spotify, LG, HP, Volvo">
+            <strong>Адаптировал и защитил глобальные стратегии</strong> международных брендов на российском рынке: Samsung, Spotify, LG, HP, Volvo
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PREVIOUS -->
+    <section class="section">
+      <p class="section-title" data-ru="Предыдущий опыт" data-en="Earlier Experience">Earlier Experience</p>
+      <div class="prev-exp">
+        <div class="prev-item"><strong>Httpool</strong> — <span data-ru="Key Client Success, 2015–2021" data-en="Key Client Success, 2015–2021">Key Client Success, 2015–2021</span></div>
+        <div class="prev-item"><strong>Httpool</strong> — <span data-ru="Client Success, 2012–2015" data-en="Client Success, 2012–2015">Client Success, 2012–2015</span></div>
+        <div class="prev-item"><strong>K102</strong> — <span data-ru="Client Success, 2011–2012" data-en="Client Success, 2011–2012">Client Success, 2011–2012</span></div>
+        <div class="prev-item"><strong>Newmann Bauer MG</strong> — <span data-ru="Client Success, 2010–2011" data-en="Client Success, 2010–2011">Client Success, 2010–2011</span></div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section">
+      <p class="section-title" data-ru="Навыки" data-en="Skills">Skills</p>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-category" data-ru="Adtech-экосистема" data-en="Adtech Ecosystem">Adtech-экосистема</div>
+          <div class="skill-list" data-ru="Web/Mobile performance, Influence, Awareness, Programmatic, OEM" data-en="Web/Mobile performance, Influence marketing, Awareness, Programmatic, OEM">Web/Mobile performance, Influence, Awareness, Programmatic, OEM</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-category" data-ru="Операции и процессы" data-en="Operations & Processes">Операции и процессы</div>
+          <div class="skill-list" data-ru="Командные workflow, CRM → PBI аналитика, управление IT-бэклогом" data-en="Team workflow design, CRM → PBI analytics, IT backlog management">Командные workflow, CRM → PBI аналитика, управление IT-бэклогом</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-category" data-ru="Клиентский сервис" data-en="Client Service">Клиентский сервис</div>
+          <div class="skill-list" data-ru="Проектная работа, точки роста, развитие аккаунтов, управление портфелем" data-en="Project-based client work, growth strategies, key account development, client portfolio management">Проектная работа, точки роста, развитие аккаунтов, управление портфелем</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-category" data-ru="Партнёрства" data-en="Partnerships">Партнёрства</div>
+          <div class="skill-list" data-ru="Инсентивы и рибейтные условия, баинг-стратегии" data-en="Incentives and rebate structures, buying strategies">Инсентивы и рибейтные условия, баинг-стратегии</div>
+        </div>
+        <div class="skill-card full">
+          <div class="skill-category" data-ru="Soft" data-en="Soft Skills">Soft</div>
+          <div class="skill-list" data-ru="Структурное мышление и коммуникация, самостоятельность в принятии решений, кросс-функциональная работа на стыке коммерции / продукта / операций, эффективная работа в мультикультурной среде" data-en="Structured thinking and communication, independent decision-making, cross-functional work at the intersection of commercial / product / operations, effective collaboration in multicultural environments">Структурное мышление и коммуникация, самостоятельность в принятии решений, кросс-функциональная работа на стыке коммерции / продукта / операций, эффективная работа в мультикультурной среде</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- EDU + LANG -->
+    <div class="meta-row">
+      <div class="meta-block">
+        <div class="meta-label" data-ru="Образование" data-en="Education">Education</div>
+        <div class="meta-value">
+          <strong data-ru="МИЭМО" data-en="Moscow Institute of Economics and International Relations">МИЭМО</strong><br>
+          <span data-ru="Менеджмент организации, 2004–2009" data-en="Organizational Management, 2004–2009">Менеджмент организации, 2004–2009</span>
+        </div>
+      </div>
+      <div class="meta-block">
+        <div class="meta-label" data-ru="Языки" data-en="Languages">Languages</div>
+        <div class="meta-value">
+          <strong data-ru="Русский" data-en="Russian">Русский</strong> — <span data-ru="родной" data-en="native">родной</span><br>
+          <strong data-ru="Английский" data-en="English">Английский</strong> — C1
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span data-ru="Москва · " data-en="Moscow · ">Moscow · </span><a href="mailto:yuri.telezhkin@gmail.com">yuri.telezhkin@gmail.com</a> · <a href="https://t.me/yuri_tl" target="_blank" rel="noopener">Telegram: @yuri_tl</a>
+    </footer>
+
+  </div>
+
+  <script>
+    // ---- THEME ----
+    var currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    updateThemeIcon();
+
+    function toggleTheme() {
+      currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      updateThemeIcon();
+    }
+
+    function updateThemeIcon() {
+      var btn = document.getElementById('theme-btn');
+      if (!btn) return;
+      if (currentTheme === 'dark') {
+        btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+      } else {
+        btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      }
+    }
+
+    // ---- LANG ----
+    var currentLang = 'en';
+    document.addEventListener('DOMContentLoaded', function(){ applyLang(); });
+
+    function toggleLang() {
+      currentLang = currentLang === 'ru' ? 'en' : 'ru';
+      applyLang();
+    }
+
+    function applyLang() {
+      var isEn = currentLang === 'en';
+
+      // Update label on button
+      document.getElementById('lang-label').textContent = isEn ? 'RU' : 'EN';
+      document.getElementById('lang-btn').classList.toggle('active', isEn);
+
+      // Update page lang attr
+      document.documentElement.lang = isEn ? 'en' : 'ru';
+
+      // Name
+      var nameEl = document.querySelector('.name');
+      if (nameEl) nameEl.textContent = isEn ? 'Yuri Telezhkin' : 'Тележкин Юрий';
+      // Update photo alt
+      var photoImg = document.querySelector('.photo-wrap img');
+      if (photoImg) photoImg.alt = isEn ? 'Yuri Telezhkin' : 'Тележкин Юрий';
+
+      // All elements with data-ru / data-en on their innerHTML
+      var els = document.querySelectorAll('[data-ru][data-en]');
+      els.forEach(function(el) {
+        var val = isEn ? el.getAttribute('data-en') : el.getAttribute('data-ru');
+        if (val !== null) el.innerHTML = val;
+      });
+
+      // Bullet LIs — they have data-ru/data-en too, handled above
+    }
+
+    // ---- PDF ----
+    function downloadPDF() {
+      var name = currentLang === 'en' ? 'Yuri_Telezhkin_CV' : 'Telezhkin_CV';
+      var style = document.createElement('style');
+      style.id = 'print-override';
+      style.textContent = '@page { size: A4; margin: 12mm 14mm; }';
+      document.head.appendChild(style);
+
+      var originalTitle = document.title;
+      document.title = name;
+      window.print();
+      document.title = originalTitle;
+
+      setTimeout(function() {
+        var el = document.getElementById('print-override');
+        if (el) el.remove();
+      }, 1000);
+    }
+  </script>
+
+</body>
+</html>

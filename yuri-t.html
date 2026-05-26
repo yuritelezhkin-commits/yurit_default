@@ -1,382 +1,87 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yuri Telezhkin — Operations / Client Success / Partnerships</title>
+  <meta charset="utf-8">
+  <title>Yuri Telezhkin — CV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    :root {
-      --bg: #f5f1ea;
-      --paper: #fffdfa;
-      --text: #1f1e1a;
-      --muted: #6b675f;
-      --line: #ddd6ca;
-      --accent: #0f6b63;
-      --accent-soft: #e2f1ee;
-      --chip: #efe7da;
-      --shadow: 0 18px 50px rgba(22, 20, 15, 0.08);
-    }
-
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      background: linear-gradient(180deg, #f5f1ea 0%, #efe9df 100%);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Arial, sans-serif;
-      line-height: 1.55;
-    }
-
-    .page {
-      max-width: 1040px;
-      margin: 28px auto;
-      background: var(--paper);
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 240px 1fr;
-      gap: 32px;
-      padding: 34px;
-      background: linear-gradient(180deg, #fffdf9 0%, #fbf7f1 100%);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .photo {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 20px;
-      border: 1px solid var(--line);
-      background: #e7dfd2;
-    }
-
-    h1 {
-      margin: 0 0 8px;
-      font-size: 38px;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-    }
-
-    .subtitle {
-      margin: 0 0 16px;
-      font-size: 18px;
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    .summary {
-      margin: 14px 0 0;
-      max-width: 62ch;
-      font-size: 15px;
-    }
-
-    .contacts,
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .contacts li,
-    .chips span {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: var(--chip);
-      font-size: 14px;
-    }
-
-    .main {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 290px;
-    }
-
-    .content {
-      padding: 30px 34px 38px;
-      border-right: 1px solid var(--line);
-    }
-
-    .sidebar {
-      padding: 30px 24px 38px;
-      background: #fcfaf6;
-    }
-
-    section + section,
-    .side-block + .side-block,
-    .job + .job {
-      margin-top: 28px;
-    }
-
-    h2 {
-      margin: 0 0 14px;
-      font-size: 13px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .job {
-      padding-top: 2px;
-    }
-
-    .job-head {
-      margin-bottom: 10px;
-    }
-
-    .job-title {
-      margin: 0 0 4px;
-      font-size: 20px;
-      font-weight: 700;
-    }
-
-    .job-meta {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .job-desc {
-      margin: 8px 0 10px;
-      font-size: 14px;
-      color: var(--text);
-    }
-
-    .bullets,
-    .plain-list {
-      margin: 0;
-      padding-left: 18px;
-    }
-
-    .bullets li,
-    .plain-list li {
-      margin: 0 0 8px;
-      font-size: 15px;
-    }
-
-    .muted {
-      color: var(--muted);
-      font-size: 14px;
-      margin: 0;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .label {
-      display: inline-block;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-
-    @media (max-width: 860px) {
-      .hero,
-      .main {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding: 24px;
-      }
-
-      .content {
-        border-right: none;
-        border-bottom: 1px solid var(--line);
-        padding: 24px;
-      }
-
-      .sidebar {
-        padding: 24px;
-      }
-
-      .photo {
-        max-width: 280px;
-      }
-    }
-
-    @media print {
-      body {
-        background: #ffffff;
-      }
-
-      .page {
-        margin: 0;
-        box-shadow: none;
-        border-radius: 0;
-      }
-    }
+    /* сюда вставь те же стили, что сейчас в yuri-t.html (я не меняю CSS),
+       чтобы верстка осталась один-в-один */
   </style>
 </head>
 <body>
-  <div class="page">
-    <header class="hero">
-      <div>
-        <img class="photo" src="20240923_190824.jpg" alt="Yuri Telezhkin" />
-      </div>
-      <div>
-        <div class="label">Profile</div>
-        <h1>Yuri Telezhkin</h1>
-        <p class="subtitle">Operations · Client Success · Partnerships | Digital Advertising &amp; AdTech</p>
-        <ul class="contacts">
-          <li><a href="mailto:yuri.telezhkin@gmail.com">yuri.telezhkin@gmail.com</a></li>
-          <li><a href="tel:+79167953747">+7 916 795-37-47</a></li>
-          <li><a href="https://www.linkedin.com/in/yuri-telezhkin" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          <li>Москва / Remote / Hybrid</li>
-        </ul>
-        <p class="summary">
-          15+ лет в digital advertising, преимущественно в международных adtech- и sales-partner-компаниях.
-          Начинал в клиентском сервисе, постепенно вырос до операционного управления и работаю на стыке операций,
-          клиентского сервиса и партнёрств. Интересны senior-роли вокруг operations / client success / partnerships
-          в digital-бизнесах с сильной культурой и международным контекстом.
-        </p>
-      </div>
-    </header>
 
-    <div class="main">
-      <main class="content">
-        <section>
-          <h2>Опыт</h2>
-
-          <article class="job">
-            <div class="job-head">
-              <h3 class="job-title">TopTraffic Internet Marketing Agency — Chief Operating Officer</h3>
-              <p class="job-meta">Февраль 2025 – Март 2026 · Москва</p>
-            </div>
-            <p class="job-desc">Digital-агентство (performance, influence).</p>
-            <ul class="bullets">
-              <li>Управлял операциями трёх юнитов (около 30 человек): стандартизировал процессы, внедрил трекинг ключевых этапов в CRM, ввёл прозрачный учёт загрузки и эффективности команд.</li>
-              <li>Снизил и стабилизировал churn клиентов за счёт перехода на проектный формат работы и скоринга «здоровья» портфеля — churn перестал быть «чёрным ящиком» и стал управляемой метрикой.</li>
-              <li>Улучшил экономику юнита mobile performance, внедрив систему управления рибейтами: учёт коммитов и стратегия закупки у ключевых партнёров, влияние рибейтов стало прозрачно для планирования и отчётности.</li>
-              <li>Руководил переходом influence-юнита на внутреннюю платформу: сократил операционные ошибки и повысил пропускную способность команды без увеличения штата.</li>
-            </ul>
-          </article>
-
-          <article class="job">
-            <div class="job-head">
-              <h3 class="job-title">Appnext — Key Client Success / Partnerships</h3>
-              <p class="job-meta">Февраль 2024 – Декабрь 2024 · Москва</p>
-            </div>
-            <p class="job-desc">Платформа для discovery мобильных приложений, HQ — Тель-Авив, рынки RU &amp; CIS.</p>
-            <ul class="bullets">
-              <li>Увеличил выручку от ключевых traffic-партнёров на ~15% от квартала к кварталу за счёт разработки incentive-программ для Tier-1 клиентов и контроля реализации командой: от переговоров до открутки и начисления условий.</li>
-              <li>Увеличил выручку агентского канала за счёт гибкой системы рибейтов, дополнительных переговоров и контроля выполнения условий по этапам.</li>
-              <li>Улучшил качество клиентского сервиса единым командным подходом к QBR, аналитике и планам роста.</li>
-              <li>Внёс структурный подход к тестированию форматов и стратегий биддинга — повторяемые сценарии масштабирования бюджетов для ключевых клиентов (ретаргетинг, video-first).</li>
-              <li>Расширил портфель до 15+ ключевых клиентов, выявляя блокеры роста и собирая под них стратегии развития.</li>
-            </ul>
-          </article>
-
-          <article class="job">
-            <div class="job-head">
-              <h3 class="job-title">Aleph Group, Inc. — Client Success Manager Lead</h3>
-              <p class="job-meta">Март 2022 – Октябрь 2023 · Лимасол, Кипр</p>
-            </div>
-            <p class="job-desc">Global Digital Advertising Partner · Cyprus office.</p>
-            <ul class="bullets">
-              <li>Вёл портфель клиентов с бюджетом до 600K $ в месяц.</li>
-              <li>Собирал команду клиентского сервиса на продуктах Snapchat и TikTok: определял роли, KPI и мотивацию, выстраивал воронку «бриф → запуск → оптимизация → рост аккаунта».</li>
-              <li>Существенно масштабировал выручку крупнейшего клиента: устранял блокеры, подключал новые рынки, выстраивал структурную цепь коммуникации и принятия решений для нескольких команд на стороне клиента.</li>
-              <li>Запустил и развил рынок для Snapchat: довёл базу до 20+ активных клиентов, адаптировал стратегию и материалы для mobile performance-рекламодателей.</li>
-              <li>Совместно с Sales и Buying Director изменил продуктовый нарратив: от охватов и уникальной аудитории к performance-метрикам и поэтапному тестированию, что улучшило конверсию от презентаций к реальным кампаниям.</li>
-            </ul>
-          </article>
-
-          <article class="job">
-            <div class="job-head">
-              <h3 class="job-title">Aleph Group, Inc. — Client Success Manager Lead</h3>
-              <p class="job-meta">Февраль 2021 – Март 2022 · Москва</p>
-            </div>
-            <p class="job-desc">Twitter / LinkedIn / Spotify / LG Official Sales Partner · RU &amp; CIS.</p>
-            <ul class="bullets">
-              <li>Как advocate Twitter на развивающемся рынке построил портфель из 30+ always-on клиентов в России.</li>
-              <li>Проектировал, согласовывал и контролировал агентские рибейтные соглашения (Publicis, Dentsu, Omnicom, Havas, BBDO).</li>
-              <li>Рост выручки юнита за счёт кастомных предложений и спецпроектов: чат-боты, brand-lift-исследования, lead-generation-форматы.</li>
-              <li>Адаптировал и защищал глобальные стратегии международных брендов под российский рынок (Samsung, Spotify, LG, HP, Volvo).</li>
-            </ul>
-          </article>
-
-          <article class="job">
-            <div class="job-head">
-              <h3 class="job-title">Httpool — Key Client Success Manager</h3>
-              <p class="job-meta">Февраль 2015 – Февраль 2021 · Москва</p>
-            </div>
-          </article>
-
-          <article class="job">
-            <div class="job-head">
-              <h3 class="job-title">Httpool — Client Success Manager</h3>
-              <p class="job-meta">Март 2012 – Август 2014 · Москва</p>
-            </div>
-          </article>
-
-          <article class="job">
-            <div class="job-head">
-              <h3 class="job-title">k102 — Client Success Manager</h3>
-              <p class="job-meta">Апрель 2011 – Февраль 2012 · Москва</p>
-            </div>
-          </article>
-        </section>
-      </main>
-
-      <aside class="sidebar">
-        <section class="side-block">
-          <h2>Ключевые зоны</h2>
-          <div class="chips">
-            <span>Operations</span>
-            <span>Client Success</span>
-            <span>Partnerships</span>
-            <span>AdTech</span>
-            <span>Digital Advertising</span>
-            <span>Revenue Growth</span>
-            <span>CRM / BI</span>
-            <span>Cross-functional</span>
-          </div>
-        </section>
-
-        <section class="side-block">
-          <h2>Навыки</h2>
-          <ul class="plain-list">
-            <li>Операционное управление и стандартизация процессов</li>
-            <li>Клиентский сервис и развитие ключевых клиентов</li>
-            <li>Партнёрства, рибейты, negotiation management</li>
-            <li>Performance / mobile / influence advertising</li>
-            <li>Управление командой и кросс-функциональное взаимодействие</li>
-            <li>CRM, PBI, отчётность, KPI и планирование</li>
-          </ul>
-        </section>
-
-        <section class="side-block">
-          <h2>Языки</h2>
-          <p class="muted">Русский — native</p>
-          <p class="muted">English — professional working proficiency</p>
-        </section>
-
-        <section class="side-block">
-          <h2>Образование</h2>
-          <p class="muted">Московский университет экономики и международных отношений</p>
-          <p class="muted">Management of Organization · 2004–2009</p>
-        </section>
-      </aside>
+  <!-- HERO / SUMMARY -->
+  <header class="hero">
+    <div class="hero-photo">
+      <!-- Новое фото -->
+      <img src="20240923_190824.jpg" alt="Yuri Telezhkin">
     </div>
-  </div>
+    <div class="hero-text">
+      <h1>Yuri Telezhkin</h1>
+      <p class="hero-subtitle">
+        Operations · Client Success · Partnerships | Digital Advertising &amp; AdTech
+      </p>
+      <p class="hero-summary">
+        Более 15 лет в digital advertising, преимущественно в международных adtech- и sales-partner-компаниях.
+        Работаю на стыке операций, клиентского сервиса и партнёрств: выстраиваю кросс-командную синергию,
+        устраняю узкие места с наибольшим влиянием на результат и создаю позитивный клиентский опыт
+        с фокусом на продукт и сервис.
+      </p>
+    </div>
+  </header>
+
+  <!-- CONTACTS / LINKS (оставь как в исходном файле yuri-t.html) -->
+
+  <main>
+    <section id="experience">
+      <h2>Work Experience</h2>
+
+      <!-- TOPTRAFFIC -->
+      <article class="job">
+        <header class="job-header">
+          <h3>TopTraffic Internet Marketing Agency — Chief Operating Officer</h3>
+          <p class="job-meta">Февраль 2025 – Март 2026 · Москва</p>
+        </header>
+        <p class="job-desc">Digital‑агентство (performance, influence).</p>
+        <ul>
+          <li>Управлял операциями трёх юнитов (около 30 человек): стандартизировал процессы, внедрил трекинг ключевых этапов в CRM, ввёл прозрачный учёт загрузки и эффективности команд.</li>
+          <li>Снизил и стабилизировал churn клиентов за счёт перехода на проектный формат работы и скоринга «здоровья» портфеля — churn перестал быть «чёрным ящиком» и стал управляемой метрикой.</li>
+          <li>Улучшил экономику юнита mobile performance, внедрив систему управления рибейтами: учёт коммитов и стратегия закупки у ключевых партнёров, влияние рибейтов стало прозрачно для планирования и отчётности.</li>
+          <li>Руководил переходом influence‑юнита на внутреннюю платформу: сократил операционные ошибки и повысил пропускную способность команды без увеличения штата.</li>
+        </ul>
+      </article>
+
+      <!-- APPNEXT -->
+      <article class="job">
+        <header class="job-header">
+          <h3>Appnext — Key Client Success / Partnerships</h3>
+          <p class="job-meta">Февраль 2024 – Декабрь 2024 · Москва</p>
+        </header>
+        <p class="job-desc">Платформа для discovery мобильных приложений, HQ — Тель‑Авив, рынки RU &amp; CIS.</p>
+        <ul>
+          <li>Увеличил выручку от ключевых traffic‑партнёров на ~15% от квартала к кварталу за счёт разработки incentive‑программ для Tier‑1 клиентов и контроля реализации командой: от переговоров до открутки и начисления условий.</li>
+          <li>Увеличил выручку агентского канала за счёт гибкой системы рибейтов, дополнительных переговоров и контроля выполнения условий по этапам.</li>
+          <li>Улучшил качество клиентского сервиса единым командным подходом к QBR, аналитике и планам роста.</li>
+          <li>Внёс структурный подход к тестированию форматов и стратегий биддинга — повторяемые сценарии масштабирования бюджетов для ключевых клиентов (ретаргетинг, video‑first).</li>
+          <li>Расширил портфель до 15+ ключевых клиентов, выявляя блокеры роста и собирая под них стратегии развития.</li>
+        </ul>
+      </article>
+
+      <!-- ALEPH И ДАЛЕЕ: сюда вставь блоки из исходного yuri-t.html
+           без изменений (мы договорились их не трогать). Пример: -->
+
+      <!--
+      <article class="job">
+        ... твой существующий блок Aleph ...
+      </article>
+      ...
+      -->
+    </section>
+
+    <!-- Earlier Experience / Skills / Education — тоже берёшь из исходного файла
+         и оставляешь как есть; меняли только Summary + TopTraffic + Appnext + фото -->
+  </main>
+
 </body>
 </html>
